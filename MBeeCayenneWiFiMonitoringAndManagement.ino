@@ -111,7 +111,7 @@ void loop()
             }
           else
             {
-              Cayenne.celsiusWrite(i, 256 - ioSample.getTemperature());
+              Cayenne.celsiusWrite(i, ioSample.getTemperature() - 256);
             }  
           Cayenne.virtualWrite(i + 10, getHIH4000Humidity(ioSample.getAnalog(1)));
           Cayenne.virtualWrite(i + 20, float(ioSample.getVbatt()) / 51);
